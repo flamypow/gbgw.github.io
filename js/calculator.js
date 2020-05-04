@@ -1028,9 +1028,11 @@ class GunplaBuild {
       const partInputEl = document.querySelector('.js-input-' + currPart);
       if (partInputEl && partInputEl.dataset.combo) {
         document.querySelector('.js-input-' + partInputEl.dataset.combo).disabled = false;
+        this
         for (let i = 0; i < this.comboParts.length; i++) {
           if (this.comboParts[i].part == currPart) {
             this.comboParts.splice(i, 1);
+            this._clearComboPart(partInputEl.dataset.combo, i);
             break;
           }
         }
