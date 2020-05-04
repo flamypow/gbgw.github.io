@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.5 alpha
+- Fixed Remove part button not clearing other slot occupied by a combo part 
+
 ## 1.1.4
 
 - Added CSV and SQL data
