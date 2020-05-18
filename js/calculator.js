@@ -717,9 +717,7 @@ class GunplaBuild {
         const input = this.inputs[inputName];
         if (input) {
           //this._tallyWordTags(input);
-          this._resetWordTagTally();
-          this._resetParameters();
-          this._resetAttributesTally();
+          
           this._calculateParameters(input);
           //this._tallyAttributes(input);
         }
@@ -1048,13 +1046,22 @@ class GunplaBuild {
 
     const resetBtn = document.querySelector('.reset-btn');
     resetBtn.addEventListener('click', e => {
-      let slots = Object.keys(this.inputs);
+     /* let slots = Object.keys(this.inputs);
       slots.forEach((currentPart, index) => {
         this._clearPartBySlot(currentPart, index === slots.length - 1)
-      });
+      });*/
+      _resetAll();
     });
   }
 
+  _resetAll(){
+    let slots = Object.keys(this.inputs);
+      slots.forEach((currentPart, index) => {
+        this._clearPartBySlot(currentPart, index === slots.length - 1)
+      });
+  }
+  
+  
   _displayPartInfo(part) {
     if (part && part.dataset.part && MainSlot.indexOf(part.dataset.part) > -1) {
       const wordTag = JSON.parse(part.dataset.wt),
