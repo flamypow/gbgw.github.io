@@ -1089,7 +1089,7 @@ class GunplaBuild {
           partItem = document.querySelector('.js-input-' + currPart);
       markEl.classList.add('parts-marks__item');
       markEl.classList.add('js-mark-item');
-      markEl.dataset.value = '0';
+      markEl.dataset.value = '5';
       markEl.addEventListener('click', e => {
         this._updateMark(e.currentTarget);
         this._setSelectedPart(currPart);
