@@ -716,9 +716,12 @@ class GunplaBuild {
       if (inputList.hasOwnProperty(inputName) && this.inputs[inputName]) {
         const input = this.inputs[inputName];
         if (input) {
-          this._tallyWordTags(input);
+          //this._tallyWordTags(input);
+          this._resetWordTagTally();
+          this._resetParameters();
+          this._resetAttributesTally();
           this._calculateParameters(input);
-          this._tallyAttributes(input);
+          //this._tallyAttributes(input);
         }
       }
     }
