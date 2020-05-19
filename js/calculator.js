@@ -547,7 +547,7 @@ class GunplaBuild {
 
   _handlePartSelection(currTarget) {
     let partInput, partData;
-    if (currTarget.dataset.part && this.inputs[currTarget.dataset.part]) {
+  //  if (currTarget.dataset.part && this.inputs[currTarget.dataset.part]) {
       partData = currTarget.dataset.part;
       partInput = this.inputs[partData];
       partInput.value = partInput.title = currTarget.dataset.partname;
@@ -574,7 +574,7 @@ class GunplaBuild {
         let weaponTypeWrapper = parentRow.querySelector('.weapon-type');
         weaponTypeWrapper.innerHTML = `<span class="gbgw-${cls}" data-rarity="${currTarget.dataset.rarity}" title="${currTarget.dataset.type}"></span>`;
       }
-    }
+   // }
     this._calculate(partData);
   }
 
