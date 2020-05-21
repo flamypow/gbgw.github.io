@@ -142,7 +142,7 @@ class GunplaCalculator {
       class: 'word-tags',
       children: [{
         el: 'h3',
-        text: 'Word Tags'
+        text: 'Word Tags (for melee)'
       }, ...MainSlot.map(wordTag => {
         return {
           el: 'div',
@@ -162,7 +162,7 @@ class GunplaCalculator {
       class: 'part-trait-ex-skill',
       children: [{
         el: 'h3',
-        text: 'Part Traits / EX Skill'
+        text: 'Part Traits / EX Skill(for shot)'
       }, ...MainSlot.map(trait => {
         return {
           el: 'div',
