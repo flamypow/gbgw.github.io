@@ -59,7 +59,8 @@ class GunplaCalculator {
   }
 
   _generate() {
-    const columns = [this._wordTags(), this._partTrait(), this._info(), this._parts(), this._gears(), this._partList()];
+    //const columns = [this._wordTags(), this._partTrait(), this._info(), this._parts(), this._gears(), this._partList()];
+    const columns = [this._wordTags(), this._partTrait(), this._info(), this._parts(), this._partList()];
     columns.forEach(column => {
       this._createElement(column, this.container);
     });
