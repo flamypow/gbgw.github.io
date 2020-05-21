@@ -525,7 +525,13 @@ class GunplaBuild {
           for (let prop in partFilter) {
             partEntry.dataset[prop] = partFilter[prop] instanceof Object ? JSON.stringify(partFilter[prop]) : partFilter[prop];
           }
-          partEntry.addEventListener('click', e => this._handlePartSelection(e.currentTarget));
+          partEntry.addEventListener('click', e => {
+           let slots = Object.keys(this.inputs);
+           slots.forEach((currentPart, index) => {
+           this._clearPartBySlot(currentPart, index === slots.length - 1)
+           });
+           this._handlePartSelection(e.currentTarget)
+          });
           partEntry.addEventListener('mouseover', e => this._displayPartInfo(e.currentTarget));
           this.partList.appendChild(partEntry);
         });
