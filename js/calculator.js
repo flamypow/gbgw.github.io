@@ -152,7 +152,18 @@ class GunplaCalculator {
             class: 'js-wt-' + wordTag
           }]
         };
-      })]
+      }), ...MainSlot.map(trait => {
+        return {
+          el: 'div',
+          class: ['row', 'height-50', 'alt-bg'],
+          children: [{
+            el: 'span',
+            class: ['part-trait-ex-skill__text', 'js-skill-trait-' + trait]
+          }]
+        };
+      })
+                
+  ]
     };
   }
 
