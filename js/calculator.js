@@ -143,6 +143,13 @@ class GunplaCalculator {
       children: [{
         el: 'h3',
         text: 'Word Tags (for melee)'
+      },
+     {
+        el: 'h3',
+        text: 'Active Word Tag'
+      }, {
+        el: 'div',
+        class: ['row', 'active-word-tag-list', 'js-active-wt']
       }, ...MainSlot.map(wordTag => {
         return {
           el: 'div',
@@ -152,17 +159,7 @@ class GunplaCalculator {
             class: 'js-wt-' + wordTag
           }]
         };
-      }), ...MainSlot.map(trait => {
-        return {
-          el: 'div',
-          class: ['row', 'height-50', 'alt-bg'],
-          children: [{
-            el: 'span',
-            class: ['part-trait-ex-skill__text', 'js-skill-trait-' + trait]
-          }]
-        };
-      })
-                
+      })     
   ]
     };
   }
